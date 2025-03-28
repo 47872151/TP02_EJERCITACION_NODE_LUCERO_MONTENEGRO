@@ -1,0 +1,19 @@
+{
+  "name": "tp02_ejercitacion_node_lucero_montenegro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/47872151/TP02_EJERCITACION_NODE_LUCERO_MONTENEGRO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/47872151/TP02_EJERCITACION_NODE_LUCERO_MONTENEGRO/issues"
+  },
+  "homepage": "https://github.com/47872151/TP02_EJERCITACION_NODE_LUCERO_MONTENEGRO#readme",
+  "description": ""
+}
