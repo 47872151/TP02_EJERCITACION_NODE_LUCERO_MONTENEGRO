@@ -1,4 +1,3 @@
-
 let miObjeto = null;
 let miURL = null;
 
@@ -11,23 +10,9 @@ console.log(miObjeto);
 function parsearUrl(miURL){
   
     let objeto = {
-        href: miURL.href,
-        origin: miURL.origin, 
+        host: miURL.host,
         pathname: miURL.pathname, 
-        search: miURL.search, 
-        searchParams: miURL.searchParams,
-        host: miURL.host, 
-        protocol: miURL.protocol, 
-        hostname: miURL.hostname, 
-        port: miURL.port 
+        parametros: Object.fromEntries(miURL.searchParams)
     };
-
-    let params = {};
-    miURL.searchParams.forEach((value, key) => {
-        params[key] = value;
-    });
-
-    objeto.params = params;
-
     return objeto;
 }

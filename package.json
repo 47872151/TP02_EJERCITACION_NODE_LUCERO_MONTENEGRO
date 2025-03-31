@@ -10,9 +10,9 @@
     "ej03": "node src/ej03.js",
     "ej04": "node src/ej04.js",
     "ej05": "node src/ej05.js",
-    "ej06": "node src/ej06.js"
+    "ej06": "node src/ej06.js",
+    "ej07": "node src/ej07.js"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/47872151/TP02_EJERCITACION_NODE_LUCERO_MONTENEGRO.git"
@@ -23,5 +23,8 @@
     "url": "https://github.com/47872151/TP02_EJERCITACION_NODE_LUCERO_MONTENEGRO/issues"
   },
   "homepage": "https://github.com/47872151/TP02_EJERCITACION_NODE_LUCERO_MONTENEGRO#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "currency-map-country": "^1.0.12"
+  }
 }

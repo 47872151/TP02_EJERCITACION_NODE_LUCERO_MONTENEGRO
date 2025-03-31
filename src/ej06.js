@@ -3,37 +3,26 @@ let miURL = null;
 let miURLInvalida = null;
 
 miURL = new URL('http://www.ort.edu.ar:8080/alumnos/index.htm?curso=2022&mes=mayo');
-miURLInvalida = new URL('http://url-invalida');
+miURLInvalida = 'url-invalida';
 miObjeto = parsearUrl(miURLInvalida);
 
 console.clear();
 console.log(miObjeto);
 
-function parsearUrl(miURLInvalida){
+function parsearUrl(miURL) {
     let objeto;
-    try{
-    objeto = {
-        href: miURLInvalida.href,
-        origin: miURLInvalida.origin, 
-        pathname: miURLInvalida.pathname, 
-        search: miURLInvalida.search, 
-        searchParams: miURLInvalida.searchParams,
-        host: miURLInvalida.host, 
-        protocol: miURLInvalida.protocol, 
-        hostname: miURLInvalida.hostname, 
-        port: miURLInvalida.port 
-    };
-
-    let params = {};
-    miURLInvalida.searchParams.forEach((value, key) => {
-        params[key] = value;
-    });
-
-    objeto.params = params;
+    try {
+        objeto = {
+            host: miURL.host,
+            pathname: miURL.pathname,
+            parametros: Object.fromEntries(miURL.searchParams)
+        };
+    } catch (error) {
+        objeto = {
+            host: null, 
+            pathname: null, 
+            parametros: null 
+        };
     }
-    catch(error){
-        objeto = null;
-    }
-
     return objeto;
 }
