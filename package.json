@@ -9,7 +9,8 @@
     "ej02": "node src/ej02.js",
     "ej03": "node src/ej03.js",
     "ej04": "node src/ej04.js",
-    "ej05": "node src/ej05.js"
+    "ej05": "node src/ej05.js",
+    "ej06": "node src/ej06.js"
   },
   
   "repository": {
