@@ -11,7 +11,8 @@
     "ej04": "node src/ej04.js",
     "ej05": "node src/ej05.js",
     "ej06": "node src/ej06.js",
-    "ej07": "node src/ej07.js"
+    "ej07": "node src/ej07.js",
+    "ej08": "node src/ej08.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "homepage": "https://github.com/47872151/TP02_EJERCITACION_NODE_LUCERO_MONTENEGRO#readme",
   "description": "",
   "dependencies": {
+    "axios": "^1.8.4",
     "currency-map-country": "^1.0.12"
   }
 }

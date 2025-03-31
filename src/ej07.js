@@ -1,19 +1,19 @@
+import { getCountry } from 'currency-map-country';
 
-const currencyMap = require('currency-map-country');
 
 function obtenerMoneda(codigoPais) {
     
-    const moneda = currencyMap[codigoPais];
+    const moneda = JSON.stringify(getCountry(codigoPais));
     
     return moneda ? moneda : null;
 }
 
 let monedaDelPais, codigoPais;
 
-codigoPais = 'AR';
+codigoPais = 'UK';
 monedaDelPais = obtenerMoneda(codigoPais);
 console.log(`La moneda del país ${codigoPais} es: ${monedaDelPais}`);
 
-codigoPais = 'UZA';
+codigoPais = 'USA';
 monedaDelPais = obtenerMoneda(codigoPais);
 console.log(`La moneda del país ${codigoPais} es: ${monedaDelPais}`);
