@@ -10,7 +10,7 @@ function obtenerMoneda(codigoPais) {
 
 let monedaDelPais, codigoPais;
 
-codigoPais = 'UK';
+codigoPais = 'ARG';
 monedaDelPais = obtenerMoneda(codigoPais);
 console.log(`La moneda del país ${codigoPais} es: ${monedaDelPais}`);
 
