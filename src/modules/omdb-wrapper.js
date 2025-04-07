@@ -1,4 +1,3 @@
-// Importamos axios
 import axios from "axios";
 
 const APIKEY = "b8b3928a";
@@ -10,16 +9,14 @@ const OMDBSearchByPage = async (searchText, page = 1) => {
   };
 
   try {
-    // Hacemos la solicitud a la API de OMDB
     const response = await axios.get("http://www.omdbapi.com/", {
       params: {
-        s: searchText,     // Título de la película a buscar
-        page: page,        // Página de resultados (paginación)
-        apikey: APIKEY     // La API key
+        s: searchText,
+        page: page,
+        apikey: APIKEY
       }
     });
 
-    // Verificamos si la respuesta es exitosa y contiene resultados
     if (response.data.Response === "True") {
       returnObject.respuesta = true;
       returnObject.cantidadTotal = response.data.totalResults;
@@ -40,15 +37,13 @@ const OMDBSearchComplete = async (searchText) => {
   };
 
   try {
-    // Hacemos la solicitud a la API de OMDB
     const response = await axios.get("http://www.omdbapi.com/", {
       params: {
-        s: searchText,     // Título de la película a buscar
-        apikey: APIKEY     // La API key
+        s: searchText,
+        apikey: APIKEY
       }
     });
 
-    // Verificamos si la respuesta es exitosa y contiene resultados
     if (response.data.Response === "True") {
       returnObject.respuesta = true;
       returnObject.cantidadTotal = response.data.totalResults;
@@ -69,15 +64,13 @@ const OMDBGetByImdbID = async (imdbID) => {
   };
 
   try {
-    // Hacemos la solicitud a la API de OMDB usando el IMDb ID
     const response = await axios.get("http://www.omdbapi.com/", {
       params: {
-        i: imdbID,        // El imdbID de la película
-        apikey: APIKEY     // La API key
+        i: imdbID,
+        apikey: APIKEY
       }
     });
 
-    // Verificamos si la respuesta es exitosa
     if (response.data.Response === "True") {
       returnObject.respuesta = true;
       returnObject.datos = response.data;
@@ -89,5 +82,4 @@ const OMDBGetByImdbID = async (imdbID) => {
   return returnObject;
 };
 
-// Exportamos las funciones para que puedan ser usadas en otros módulos
 export { OMDBSearchByPage, OMDBSearchComplete, OMDBGetByImdbID };
