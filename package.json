@@ -12,7 +12,8 @@
     "ej05": "node src/ej05.js",
     "ej06": "node src/ej06.js",
     "ej07": "node src/ej07.js",
-    "ej08": "node src/ej08.js"
+    "ej08": "node src/ej08.js",
+    "server": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,8 @@
   "description": "",
   "dependencies": {
     "axios": "^1.8.4",
-    "currency-map-country": "^1.0.12"
+    "cors": "^2.8.5",
+    "currency-map-country": "^1.0.12",
+    "express": "^5.1.0"
   }
 }
