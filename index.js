@@ -8,13 +8,18 @@ app.use(cors());
 app.use(express.json()); 
 
 
-app.get('/', (req, res) => { // EndPoint "/"
-    res.send('Ya estoy respondiendo!');
+app.get('/', (req, res) => {
+    res.status(200).send('Ya estoy respondiendo!');
     })
-app.get('/saludar', (req, res) => { // EndPoint "/saludar"
-res.send('Hello World!');
+
+
+app.get('/saludar/:nombre', (req, res) => { 
+res.status(200).send('Hola ' + req.params.nombre);
 })
 
+app.get('/validarfecha/:ano/:mes/:dia', (req, res) => { 
+    
+    })
 
 app.listen(port, () => {
 console.log(`Example app listening on port ${port}`)
