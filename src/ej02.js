@@ -6,7 +6,7 @@ console.log(`La constante PI vale '${PI}'`);
 console.log(`Array:'${Array}'`);
 
 let totalSUMA = sumar(numero1, numero2);
-console.log(`sumar(${numero1}, ${numero2}) = ${totalSUMA}`);
+console.log(`sumar(${numero1}, ${numero2}) = ${totalSUMA}`); 
 
 let totalRESTA = restar(numero1, numero2);
 console.log(`restar(${numero1}, ${numero2}) = ${totalRESTA}`);

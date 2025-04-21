@@ -13,7 +13,8 @@
     "ej06": "node src/ej06.js",
     "ej07": "node src/ej07.js",
     "ej08": "node src/ej08.js",
-    "server": "node index.js"
+    "server": "node index.js",
+    "euge": "node server.js"
   },
   "repository": {
     "type": "git",
