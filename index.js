@@ -1,6 +1,7 @@
 import express from "express"; 
 import cors from "cors";
 import {sumar, restar, multiplicar, dividir} from './src/modules/matematica.js'
+import { OMDBSearchByPage, OMDBSearchComplete, OMDBGetByImdbID } from './src/modules/omdb-wrapper.js';
 const app = express();
 const port = 3000;
 
@@ -61,6 +62,64 @@ app.get('/matematica/dividir', (req, res) => {
   res.status(200).send(`Resultado: ${resultado}`);
 });
 
+//c
+app.get('/omdb/searchbypage', async (req, res) => {
+  try {
+    const { search, p } = req.query;
+    const pagina = p || 1;
+    const resultado = await OMDBSearchByPage(search, pagina);
+
+    res.status(200).json({
+      respuesta: resultado.respuesta,
+      cantidadTotal: resultado.cantidadTotal,
+      datos: resultado.datos,
+    });
+  } catch (error) {
+    res.status(400).json({
+      respuesta: false,
+      cantidadTotal: 0,
+      datos: [],
+    });
+  }
+});
+
+app.get('/omdb/searchcomplete', async (req, res) => {
+  try {
+    const { search } = req.query;
+    const resultado = await OMDBSearchComplete(search);
+
+    res.status(200).json({
+      respuesta: resultado.respuesta,
+      cantidadTotal: resultado.cantidadTotal,
+      datos: resultado.datos,
+    });
+  } catch (error) {
+    res.status(400).json({
+      respuesta: false,
+      cantidadTotal: 0,
+      datos: [],
+    });
+  }
+});
+
+app.get('/omdb/getbyomdbid', async (req, res) => {
+  try {
+    const { imdbID } = req.query;
+    const resultado = await OMDBGetByImdbID(imdbID);
+
+    res.status(200).json({
+      respuesta: resultado.respuesta,
+      cantidadTotal: 1,
+      datos: resultado.datos,
+    });
+  } catch (error) {
+    res.status(400).json({
+      respuesta: false,
+      cantidadTotal: 0,
+      datos: {},
+    });
+  }
+});
 
 
 app.listen(port, () => {
