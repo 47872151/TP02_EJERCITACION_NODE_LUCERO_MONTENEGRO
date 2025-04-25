@@ -2,11 +2,13 @@ import express from "express";
 import cors from "cors";
 import {sumar, restar, multiplicar, dividir} from './src/modules/matematica.js'
 import { OMDBSearchByPage, OMDBSearchComplete, OMDBGetByImdbID } from './src/modules/omdb-wrapper.js';
+import Alumno from './src/models/Alumno.js'
 const app = express();
 const port = 3000;
 
 app.use(cors());
 app.use(express.json());
+
 
 //a
 app.get('/', (req, res) => {
@@ -28,6 +30,7 @@ app.get('/validarfecha/:ano/:mes/:dia', (req, res) => {
     res.status(200).send('Fecha válida');
   }
 })
+
 
 //b
 app.get('/matematica/sumar', (req, res) => {
@@ -61,6 +64,7 @@ app.get('/matematica/dividir', (req, res) => {
   const resultado = dividir(n1, n2);
   res.status(200).send(`Resultado: ${resultado}`);
 });
+
 
 //c
 app.get('/omdb/searchbypage', async (req, res) => {
@@ -122,6 +126,66 @@ app.get('/omdb/getbyomdbid', async (req, res) => {
 });
 
 
+//d
+const alumnosArray = [];
+alumnosArray.push(new Alumno("Esteban Dido", "22888444", 20));
+alumnosArray.push(new Alumno("Matias Queroso", "28946255", 51));
+alumnosArray.push(new Alumno("Elba Calao", "32623391", 18));
+
+app.get('/alumnos', (req, res) => {
+    res.status(200).json(alumnosArray.map(alumno => ({
+        user: alumno.getUser(),
+        DNI: alumno.getDNI(),
+        edad: alumno.getEdad()
+    })));
+});
+
+app.get('/alumnos/:dni', (req, res) => {
+  const { dni } = req.params;
+  const alumno = alumnosArray.find(a => a.getDNI() === dni);
+
+  if (alumno) {
+      res.status(200).json({
+          user: alumno.getUser(),
+          DNI: alumno.getDNI(),
+          edad: alumno.getEdad()
+      });
+  } else {
+      res.status(404).json({ message: 'Alumno no encontrado' });
+  }
+});
+
+app.post('/alumnos', (req, res) => {
+  const { username, dni, edad } = req.body;
+
+  if (!username || !dni || !edad) {
+      return res.status(400).json({ message: 'Datos incompletos' });
+  }
+
+  const nuevoAlumno = new Alumno(username, dni, edad);
+  alumnosArray.push(nuevoAlumno);
+  res.status(201).json({
+      user: nuevoAlumno.getUser(),
+      DNI: nuevoAlumno.getDNI(),
+      edad: nuevoAlumno.getEdad()
+  });
+});
+
+app.delete('/alumnos', (req, res) => {
+  const { dni } = req.body;
+
+  const index = alumnosArray.findIndex(a => a.getDNI() === dni);
+
+  if (index !== -1) {
+      alumnosArray.splice(index, 1);
+      res.status(200).json({ message: 'Alumno eliminado correctamente' });
+  } else {
+      res.status(404).json({ message: 'Alumno no encontrado' });
+  }
+});
+
+
+//http://localhost:3000/
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
