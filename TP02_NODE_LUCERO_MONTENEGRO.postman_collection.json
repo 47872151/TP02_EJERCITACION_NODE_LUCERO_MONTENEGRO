@@ -1,0 +1,739 @@
+{
+	"info": {
+		"_postman_id": "ddb20b2b-f334-4631-9d25-ce0085b2810a",
+		"name": "TP02_NODE_LUCERO_MONTENEGRO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RESPONDIENDO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SALUDAR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/saludar/eugenia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"saludar",
+						"eugenia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VALIDAR FECHA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/validarfecha/2007/07/19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"validarfecha",
+						"2007",
+						"07",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SUMAR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/matematica/sumar?n1=20&n2=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"matematica",
+						"sumar"
+					],
+					"query": [
+						{
+							"key": "n1",
+							"value": "20"
+						},
+						{
+							"key": "n2",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RESTAR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/matematica/restar?n1=20&n2=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"matematica",
+						"restar"
+					],
+					"query": [
+						{
+							"key": "n1",
+							"value": "20"
+						},
+						{
+							"key": "n2",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MULTIPLICAR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/matematica/multiplicar?n1=20&n2=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"matematica",
+						"multiplicar"
+					],
+					"query": [
+						{
+							"key": "n1",
+							"value": "20"
+						},
+						{
+							"key": "n2",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DIVIDIR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/matematica/dividir?n1=20&n2=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"matematica",
+						"dividir"
+					],
+					"query": [
+						{
+							"key": "n1",
+							"value": "20"
+						},
+						{
+							"key": "n2",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OMDB SEARCH BY PAGE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/omdb/searchbypage?search=cars&p=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"omdb",
+						"searchbypage"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "cars"
+						},
+						{
+							"key": "p",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OMDB SEARCH COMPLETE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/omdb/searchbypage?search=Batman",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"omdb",
+						"searchbypage"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Batman"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OMDB SEARCH COMPLETE",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/omdb/searchbypage?search=Batman",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"omdb",
+								"searchbypage"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Batman"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2205"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"89d-IlK4JqDgVPcWgWrOW+Fw3HnNiM4\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Apr 2025 11:53:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"respuesta\": true,\n    \"cantidadTotal\": \"599\",\n    \"datos\": {\n        \"Search\": [\n            {\n                \"Title\": \"Batman Begins\",\n                \"Year\": \"2005\",\n                \"imdbID\": \"tt0372784\",\n                \"Type\": \"movie\",\n                \"Poster\": \"https://m.media-amazon.com/images/M/MV5BODIyMDdhNTgtNDlmOC00MjUxLWE2NDItODA5MTdkNzY3ZTdhXkEyXkFqcGc@._V1_SX300.jpg\"\n            },\n            {\n                \"Title\": \"The Batman\",\n                \"Year\": \"2022\",\n                \"imdbID\": \"tt1877830\",\n                \"Type\": \"movie\",\n                \"Poster\": \"https://m.media-amazon.com/images/M/MV5BMmU5NGJlMzAtMGNmOC00YjJjLTgyMzUtNjAyYmE4Njg5YWMyXkEyXkFqcGc@._V1_SX300.jpg\"\n            },\n            {\n                \"Title\": \"Batman v Superman: Dawn of Justice\",\n                \"Year\": \"2016\",\n                \"imdbID\": \"tt2975590\",\n                \"Type\": \"movie\",\n                \"Poster\": \"https://m.media-amazon.com/images/M/MV5BZTJkYjdmYjYtOGMyNC00ZGU1LThkY2ItYTc1OTVlMmE2YWY1XkEyXkFqcGc@._V1_SX300.jpg\"\n            },\n            {\n                \"Title\": \"Batman\",\n                \"Year\": \"1989\",\n                \"imdbID\": \"tt0096895\",\n                \"Type\": \"movie\",\n                \"Poster\": \"https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg\"\n            },\n            {\n                \"Title\": \"Batman Returns\",\n                \"Year\": \"1992\",\n                \"imdbID\": \"tt0103776\",\n                \"Type\": \"movie\",\n                \"Poster\": \"https://m.media-amazon.com/images/M/MV5BZTliMDVkYTktZDdlMS00NTAwLWJhNzYtMWIwMDZjN2ViMGFiXkEyXkFqcGc@._V1_SX300.jpg\"\n            },\n            {\n                \"Title\": \"Batman & Robin\",\n                \"Year\": \"1997\",\n                \"imdbID\": \"tt0118688\",\n                \"Type\": \"movie\",\n                \"Poster\": \"https://m.media-amazon.com/images/M/MV5BYzU3ZjE3M2UtM2E4Ni00MDI5LTkyZGUtOTFkMGIyYjNjZGU3XkEyXkFqcGc@._V1_SX300.jpg\"\n            },\n            {\n                \"Title\": \"Batman Forever\",\n                \"Year\": \"1995\",\n                \"imdbID\": \"tt0112462\",\n                \"Type\": \"movie\",\n                \"Poster\": \"https://m.media-amazon.com/images/M/MV5BMTUyNjJhZWItMTZkNS00NDc4LTllNjUtYTg3NjczMzA5ZTViXkEyXkFqcGc@._V1_SX300.jpg\"\n            },\n            {\n                \"Title\": \"The Lego Batman Movie\",\n                \"Year\": \"2017\",\n                \"imdbID\": \"tt4116284\",\n                \"Type\": \"movie\",\n                \"Poster\": \"https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_SX300.jpg\"\n            },\n            {\n                \"Title\": \"Batman: The Animated Series\",\n                \"Year\": \"1992–1995\",\n                \"imdbID\": \"tt0103359\",\n                \"Type\": \"series\",\n                \"Poster\": \"https://m.media-amazon.com/images/M/MV5BYjgwZWUzMzUtYTFkNi00MzM0LWFkMWUtMDViMjMxNGIxNDUxXkEyXkFqcGc@._V1_SX300.jpg\"\n            },\n            {\n                \"Title\": \"Batman v Superman: Dawn of Justice (Ultimate Edition)\",\n                \"Year\": \"2016\",\n                \"imdbID\": \"tt18689424\",\n                \"Type\": \"movie\",\n                \"Poster\": \"https://m.media-amazon.com/images/M/MV5BOTRlNWQwM2ItNjkyZC00MGI3LThkYjktZmE5N2FlMzcyNTIyXkEyXkFqcGdeQXVyMTEyNzgwMDUw._V1_SX300.jpg\"\n            }\n        ],\n        \"totalResults\": \"599\",\n        \"Response\": \"True\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "OMDB GET MY OMDB ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/omdb/getbyomdbid?imdbID=tt0089927",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"omdb",
+						"getbyomdbid"
+					],
+					"query": [
+						{
+							"key": "imdbID",
+							"value": "tt0089927"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OMDB GET MY OMDB ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/omdb/getbyomdbid?imdbID=tt0089927",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"omdb",
+								"getbyomdbid"
+							],
+							"query": [
+								{
+									"key": "imdbID",
+									"value": "tt0089927"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1037"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"40d-6tRbkOkUbj6nJ7TGVqmT4/64zhA\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Apr 2025 11:53:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"respuesta\": true,\n    \"cantidadTotal\": 1,\n    \"datos\": {\n        \"Title\": \"Rocky IV\",\n        \"Year\": \"1985\",\n        \"Rated\": \"PG\",\n        \"Released\": \"27 Nov 1985\",\n        \"Runtime\": \"91 min\",\n        \"Genre\": \"Drama, Sport\",\n        \"Director\": \"Sylvester Stallone\",\n        \"Writer\": \"Sylvester Stallone\",\n        \"Actors\": \"Sylvester Stallone, Talia Shire, Burt Young\",\n        \"Plot\": \"Rocky Balboa proudly holds the world heavyweight boxing championship, but a new challenger has stepped forward: Drago, a six-foot-six, 261-pound fighter who has the backing of the Soviet Union.\",\n        \"Language\": \"English, Russian\",\n        \"Country\": \"United States\",\n        \"Awards\": \"9 wins & 8 nominations total\",\n        \"Poster\": \"https://m.media-amazon.com/images/M/MV5BNjJiYzRiYWMtZTgyZC00YjliLWIwZWMtZTJlYjkyYzc2MDMxXkEyXkFqcGc@._V1_SX300.jpg\",\n        \"Ratings\": [\n            {\n                \"Source\": \"Internet Movie Database\",\n                \"Value\": \"6.9/10\"\n            },\n            {\n                \"Source\": \"Rotten Tomatoes\",\n                \"Value\": \"39%\"\n            },\n            {\n                \"Source\": \"Metacritic\",\n                \"Value\": \"40/100\"\n            }\n        ],\n        \"Metascore\": \"40\",\n        \"imdbRating\": \"6.9\",\n        \"imdbVotes\": \"234,117\",\n        \"imdbID\": \"tt0089927\",\n        \"Type\": \"movie\",\n        \"DVD\": \"N/A\",\n        \"BoxOffice\": \"$127,873,716\",\n        \"Production\": \"N/A\",\n        \"Website\": \"N/A\",\n        \"Response\": \"True\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "ALUMNOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/alumnos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alumnos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ALUMNOS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/alumnos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alumnos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "157"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9d-Ck3ANpHxC84yJwG5HkIsweytXU8\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Apr 2025 11:52:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"user\": \"Esteban Dido\",\n        \"DNI\": \"22888444\",\n        \"edad\": 20\n    },\n    {\n        \"user\": \"Matias Queroso\",\n        \"DNI\": \"28946255\",\n        \"edad\": 51\n    },\n    {\n        \"user\": \"Elba Calao\",\n        \"DNI\": \"32623391\",\n        \"edad\": 18\n    },\n    {}\n]"
+				}
+			]
+		},
+		{
+			"name": "ALUMNOS DNI",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/alumnos/22888444",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alumnos",
+						"22888444"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ALUMNOS DNI",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/alumnos/22888444",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alumnos",
+								"22888444"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "50"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"32-wYvijm4evl+2uu8iPNcNKpWRcEE\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Apr 2025 11:52:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": \"Esteban Dido\",\n    \"DNI\": \"22888444\",\n    \"edad\": 20\n}"
+				}
+			]
+		},
+		{
+			"name": "ALUMNOS POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Monica Gaduro\",\r\n    \"dni\" : 11222333,\r\n    \"edad\" : 25\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/alumnos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alumnos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ALUMNOS POST",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"Monica Gaduro\",\r\n    \"dni\" : 11222333,\r\n    \"edad\" : 25\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/alumnos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alumnos"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Apr 2025 11:51:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		},
+		{
+			"name": "DELETE ALUMNOS",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"dni\": \"11222333\" }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/alumnos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"alumnos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DELETE ALUMNOS",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"dni\": \"11222333\" }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/alumnos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alumnos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c-b99O5B4QiWg6ZbXQTTl+evUocB4\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Apr 2025 11:50:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Alumno eliminado correctamente\"\n}"
+				}
+			]
+		}
+	]
+}
