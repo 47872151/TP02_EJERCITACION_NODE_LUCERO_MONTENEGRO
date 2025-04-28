@@ -156,12 +156,10 @@ app.get('/alumnos/:dni', (req, res) => {
 });
 
 app.post('/alumnos', (req, res) => {
-  const { username, dni, edad } = req.body;
-
-  if (!username || !dni || !edad) {
+  const { username, dni, edad } = req.body || {};
+  if (username == " " || dni == " " || edad == " ") {
       return res.status(400).json({ message: 'Datos incompletos' });
   }
-
   const nuevoAlumno = new Alumno(username, dni, edad);
   alumnosArray.push(nuevoAlumno);
   res.status(201).json({
@@ -172,7 +170,7 @@ app.post('/alumnos', (req, res) => {
 });
 
 app.delete('/alumnos', (req, res) => {
-  const { dni } = req.body;
+  const { dni } = req.body || {};
 
   const index = alumnosArray.findIndex(a => a.getDNI() === dni);
 
